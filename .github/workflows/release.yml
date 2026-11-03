@@ -23,7 +23,7 @@ jobs:
       - name: Build, test, and package
         shell: powershell
         run: .\build.ps1 -Package
-      - name: Publish initial preview release
+      - name: Publish release
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         shell: pwsh
         env:
@@ -32,7 +32,9 @@ jobs:
         run: |
           gh release view v0.2.0 --json tagName 2>$null
           if ($LASTEXITCODE -eq 0) {
-            Write-Host 'v0.2.0 already exists; its tag and assets will not be changed.'
+            gh release edit v0.2.0 --prerelease=false --latest --notes-file docs/RELEASE_NOTES.md
+            if ($LASTEXITCODE) { throw 'Release update failed.' }
+            Write-Host 'v0.2.0 is the latest stable release; existing tag and assets are unchanged.'
             exit 0
           }
           gh release create v0.2.0 `
@@ -42,5 +44,6 @@ jobs:
             --target $env:GITHUB_SHA `
             --title 'GameSir G7 Pro Pairing v0.2.0' `
             --notes-file docs/RELEASE_NOTES.md `
-            --prerelease
+            --latest
           if ($LASTEXITCODE) { throw 'Release creation failed.' }
+

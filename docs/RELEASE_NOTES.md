@@ -18,8 +18,9 @@ Original pairing addresses are backed up under data/ before any writes. The appl
 
 ## Validation and scope
 
-The initial implementation successfully cross-paired a G7 Pro with another G7 Pro's receiver. Wireless input and reconnection after turning the controller off and on were confirmed. The redesigned version passes 25 automated protocol/transaction checks and has been visually inspected; its refactored transport has not yet been retested with a controller in USB pairing mode. This initial public release is therefore marked as a preview.
+The initial implementation successfully cross-paired a G7 Pro with another G7 Pro's receiver. Wireless input and reconnection after turning the controller off and on were confirmed. The redesigned version passes 25 automated protocol/transaction checks and has been visually inspected; its refactored transport has not yet been retested with a controller in USB pairing mode.
 
 Compatibility with every G7 Pro edition and firmware is unproven. Pairing is a two-device operation; a disconnect may leave a partial change. Preserve the backup if an operation fails. No automatic rollback or restore function is included.
 
 No official GameSir binaries, extracted libraries, raw USB captures, private device logs, or original address backups are included. This project is not affiliated with GameSir.
+

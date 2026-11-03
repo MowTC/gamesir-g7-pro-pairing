@@ -4,9 +4,9 @@ An independent, open-source Windows utility for pairing a GameSir G7 Pro control
 
 **Verified on one G7 Pro setup:** cross-pairing, wireless input, and reconnection after turning the controller off and on. Other editions and firmware versions have not been verified. This is a community project, not an official GameSir product.
 
-[Download the Windows app](https://github.com/mowbraytc-cmyk/gamesir-g7-pro-pairing/releases/tag/v0.2.0) · [Browse the source](https://github.com/mowbraytc-cmyk/gamesir-g7-pro-pairing/tree/main/src)
+**[Download the latest Windows ZIP](https://github.com/MowTC/gamesir-g7-pro-pairing/releases/latest/download/GameSirPairing-0.2.0-win-x64.zip)** · [Browse the source](https://github.com/MowTC/gamesir-g7-pro-pairing/tree/main/src)
 
-The first public release is a preview: the initial implementation was hardware-tested successfully; the redesigned version has passed automated and visual checks but still needs a live service-mode hardware retest.
+The initial implementation was hardware-tested successfully. The redesigned version has passed automated and visual checks; its final live service-mode hardware retest has not been completed.
 
 ## Use the app
 
@@ -66,4 +66,6 @@ Newly authored source is available under the [MIT license](LICENSE). You can ins
 The protocol was investigated using an official pairing utility and USB traffic supplied for local research. This repository contains an independent implementation and protocol notes. It does not contain the official executable, extracted libraries, decompiled listings, raw captures, personal device logs, or original address backups.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for useful compatibility reports and development guidance.
+
+
 
