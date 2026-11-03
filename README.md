@@ -1,0 +1,1 @@
+# gamesir-g7-pro-pairing
