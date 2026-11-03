@@ -1,0 +1,15 @@
+bin/
+obj/
+dist/
+data/
+logs/
+research/
+.vs/
+*.user
+*.suo
+*.exe
+*.dll
+*.pdb
+*.pcap
+*.pcapng
+*.zip

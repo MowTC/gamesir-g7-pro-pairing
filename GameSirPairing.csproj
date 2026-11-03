@@ -1,0 +1,21 @@
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GameSirPairing</RootNamespace>
+    <AssemblyName>GameSirPairing</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\</OutputPath>
+    <Optimize>true</Optimize>
+    <ApplicationManifest>src\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System"/><Reference Include="System.Core"/><Reference Include="System.Xaml"/>
+    <Reference Include="WindowsBase"/><Reference Include="PresentationCore"/><Reference Include="PresentationFramework"/>
+    <Compile Include="src\NativeHid.cs"/><Compile Include="src\HidPairingDevice.cs"/>
+    <Compile Include="src\PairingProtocol.cs"/><Compile Include="src\MainWindow.cs"/>
+    <EmbeddedResource Include="src\MainWindow.xaml"><LogicalName>MainWindow.xaml</LogicalName></EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+</Project>
